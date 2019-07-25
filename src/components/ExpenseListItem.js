@@ -9,8 +9,10 @@ const ExpenseListItem = ({ id, description, amount, createdAt, note }) => (
             <h3>{description}</h3>
         </Link>
         <p>
-            {numeral(amount / 100).format('$0.0.00')} kr
-            -
+            {                
+                numeral(amount / 100).format('$0,0.00')
+            } 
+             - 
             {moment(createdAt).format('DD MMMM YYYY')}
         </p>
         <p>{note}</p>
